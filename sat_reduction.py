@@ -2,16 +2,19 @@ from pysat.solvers import Glucose3
 import utils
 import numpy as np
 
-def run_sat(K, adj_matrix):
+
+# k-clique to sat reduction
+# uses adjacency matrix for graph
+def run_sat(K, adj_matrix, keep_atts):
     g = Glucose3()
-    N = len(utils.KEEP_ATTS)
+    N = len(keep_atts)
     K = K
     temp = {}
     for i in range( N *K):
         indx = i% N
         pass_num = i // N + 1
 
-        temp[i + 1] = utils.KEEP_ATTS[indx] + str('_') + str(pass_num)
+        temp[i + 1] = keep_atts[indx] + str('_') + str(pass_num)
     # pprint(temp)
     idxes = np.arange(1, N * K + 1).reshape(K, N).astype(int)
 

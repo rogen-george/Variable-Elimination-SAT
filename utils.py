@@ -1,16 +1,39 @@
+# these are unique graph specifications of differing sizes
+EXPERIMENTAL_ATTS = [['Young', 'Smiling'],
+					 ['Young', 'Mustache', 'Smiling'],
+					 ['Young', 'Mustache', 'Smiling', 'Bald'],
+					 ['Young', 'Mustache', 'Smiling', 'Bald', 'Male'],
+					 ['Young', 'Mustache', 'Smiling', 'Bald', 'Male'],
+					 ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses'],
+					 ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses', 'Wearing_Lipstick']
+					 ]
 
-# Celebrity data set
+EXPERIMENTAL_ATTS_2 = [['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses'],
+					   ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses'],
+					   ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses'],
+					   ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses'],
+					   ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses'],
+					   ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses']
+					 ]
 
-CELEB_DATASET = 'list_attr_celeba.csv'
+EXPERIMENTAL_ATTS_3 = ['Young', 'Mustache', 'Smiling', 'Bald', 'Male', 'Eyeglasses', 'Wearing_Lipstick', 'Mouth_Slightly_Open']
+					 
 
-file = CELEB_DATASET
-edges = [('Young', 'Eyeglasses'), ('Young', 'Bald'), ('Young', 'Mustache'), ('Male', 'Mustache'),
-                  ('Male', 'Smiling'), ('Young', 'Smiling'), ('Male', 'Wearing_Lipstick')]
+EXPERIMENTAL_EDGES = [[('Young', 'Smiling')],
+					  [('Young', 'Smiling'),('Young','Mustache')],
+					  [('Young', 'Smiling'),('Young', 'Mustache'),('Young', 'Bald')],
+					  [('Young', 'Smiling'),('Young', 'Mustache'),('Young', 'Bald'),('Male', 'Mustache')],
+					  [('Young', 'Smiling'),('Young', 'Mustache'),('Young', 'Bald'),('Male', 'Mustache'),('Male','Smiling')],
+					  [('Young', 'Smiling'),('Young', 'Mustache'),('Young', 'Bald'),('Male', 'Mustache'),('Male','Smiling'),('Young', 'Eyeglasses')],
+					  [('Young', 'Smiling'),('Young', 'Mustache'),('Young', 'Bald'),('Male', 'Mustache'),('Male','Smiling'),('Young', 'Eyeglasses'), ('Male', 'Wearing_Lipstick')]
+					  ]
 
-#edges = [('Young', 'Eyeglasses'), ('Young', 'Bald'), ('Young', 'Mustache'), ('Male', 'Mustache'),
-#                   ('Male', 'Smiling'), ('Male', 'Wearing_Lipstick'), ('Young', 'Mouth_Slightly_Open'),
-#                   ('Young', 'Narrow_Eyes'), ('Male', 'Narrow_Eyes'), ('Smiling', 'Narrow_Eyes'),
-#                   ('Smiling', 'Mouth_Slightly_Open'), ('Young', 'Smiling')]
+EXPERIMENTAL_EDGES_2 = [[('Young', 'Mustache'), ('Young', 'Smiling'), ('Young', 'Bald'), ('Young', 'Male'), ('Young', 'Eyeglasses')],
+					  [('Young', 'Mustache'), ('Young', 'Smiling'), ('Young', 'Bald'), ('Male', 'Eyeglasses'), ('Young', 'Eyeglasses'), ('Male', 'Bald')],
+					  [('Young', 'Mustache'), ('Young', 'Smiling'), ('Young', 'Bald'), ('Male', 'Eyeglasses'), ('Young', 'Eyeglasses'), ('Male', 'Bald'), ('Male', 'Smiling')],
+					  [('Young', 'Mustache'), ('Young', 'Smiling'), ('Young', 'Bald'), ('Male', 'Eyeglasses'), ('Young', 'Eyeglasses'), ('Male', 'Bald'), ('Male', 'Smiling'), ('Male', 'Eyeglasses')],
+					  [('Young', 'Mustache'), ('Young', 'Smiling'), ('Young', 'Bald'), ('Male', 'Eyeglasses'), ('Young', 'Eyeglasses'), ('Male', 'Bald'), ('Male', 'Smiling'), ('Male', 'Eyeglasses'), ('Male', 'Mustache')],
+					  [('Young', 'Mustache'), ('Young', 'Smiling'), ('Young', 'Bald'), ('Male', 'Eyeglasses'), ('Young', 'Eyeglasses'), ('Male', 'Bald'), ('Male', 'Smiling'), ('Male', 'Eyeglasses'), ('Male', 'Mustache'), ('Mustache', 'Smiling')]
+					  ]
 
-KEEP_ATTS = ['Young', 'Male', 'Eyeglasses', 'Bald', 'Mustache',
-             'Smiling', 'Wearing_Lipstick']
+EXPERIMENTAL_EDGES_3 = [('Young', 'Smiling'),('Young', 'Mustache'),('Young', 'Bald'),('Male', 'Mustache'),('Male','Smiling'),('Young', 'Eyeglasses'), ('Male', 'Wearing_Lipstick'), ('Smiling', 'Mouth_Slightly_Open')]

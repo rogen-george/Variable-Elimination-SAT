@@ -4,14 +4,14 @@ from pgmpy.models import BayesianModel
 import pandas as pd
 import utils
 
-def create_bayes_net(file, edges):
-    atts = pd.read_csv(utils.file)
-    atts = atts[utils.KEEP_ATTS]
+def create_bayes_net(file, keep_atts, edges):
+    atts = pd.read_csv(file)
+    atts = atts[keep_atts]
     graph = BayesianModel()
     graph.add_nodes_from(atts.columns)
 
     # defining the structure of edges
-    graph.add_edges_from(utils.edges)
+    graph.add_edges_from(edges)
 
     # fit estimates the CPD tables for the given structure
     graph.fit(atts)

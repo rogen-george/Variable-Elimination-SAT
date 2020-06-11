@@ -4,11 +4,10 @@ In this project we use a SAT solver tool to select a Variable Elimination orderi
 
 Variable Elimination can be considered a form of dynamic programming where we sum out the variables which are not of interest to us to get the marginal distribution of the variables in the query.  To sum up a given variable we find a subset of factors that mention the given variable. The complexity of this process is exponential in the maximum size of the subset formed during the process of summing the factors.  The complexity can be reduced significantly if we choose the right variable elimination order. 
 
-We make use of the Python package PGMPY from Ankan to define our graph structure, perform the Maximum Likelihood Estimation, and recover induced graphs. You can install the package using conda 
+<b>Installation</b>
+	> git clone https://github.com/rogen-george/Variable-Elimination-SAT/
 
-	> conda install -c ankurankan pgmpy
-
-<b>Instructions</b>:
+<b>Usage Instructions</b>:
 
 	> python main.py --help --experiments <True/False> --brute <True/False> --dataset <celeba/mushroom>
 

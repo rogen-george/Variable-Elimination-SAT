@@ -5,11 +5,14 @@ In this project we use a SAT solver tool to select a Variable Elimination orderi
 Variable Elimination can be considered a form of dynamic programming where we sum out the variables which are not of interest to us to get the marginal distribution of the variables in the query.  To sum up a given variable we find a subset of factors that mention the given variable. The complexity of this process is exponential in the maximum size of the subset formed during the process of summing the factors.  The complexity can be reduced significantly if we choose the right variable elimination order. 
 
 <b>Installation</b>
-	> git clone https://github.com/rogen-george/Variable-Elimination-SAT/
+	`git clone https://github.com/rogen-george/Variable-Elimination-SAT/ && cd Variable-Elimination-SAT` 
+	`python3 -m venv variable_elim_env`
+	`source activate ./variable_elim_env/bin/activate`
+	`pip3 install -r requirements.txt`
 
 <b>Usage Instructions</b>:
 
-	> python main.py --help --experiments <True/False> --brute <True/False> --dataset <celeba/mushroom>
+	`python main.py --help --experiments <True/False> --brute <True/False> --dataset <celeba/mushroom>`
 
 --help gives an argument summary.
 

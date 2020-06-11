@@ -4,7 +4,7 @@ In this project we use a SAT solver tool to select a Variable Elimination orderi
 
 Variable Elimination can be considered a form of dynamic programming where we sum out the variables which are not of interest to us to get the marginal distribution of the variables in the query.  To sum up a given variable we find a subset of factors that mention the given variable. The complexity of this process is exponential in the maximum size of the subset formed during the process of summing the factors.  The complexity can be reduced significantly if we choose the right variable elimination order. 
 
-<b>Instructions<b>:
+<b>Instructions</b>:
 
 	> python main.py --help --experiments <True/False> --brute <True/False> --dataset <celeba/mushroom>
 
@@ -16,7 +16,7 @@ Variable Elimination can be considered a form of dynamic programming where we su
 
 --brute will find the best ordering for the celeba graph specified by the two files celeb_atts.csv and celeb_edges.csv, just as with the --dataset flag, but will use NetworkX instead of SAT
 
-<b>File Modifications<b>:
+<b>File Modifications</b>:
 
 The attribute files, mushroom_atts.csv and celeb_atts.csv, should be in a single row format and contain only names from the headers for the respective data set. Names should be given in no particular order, separated by commas, on one line. This specifies the set of random variables in the graph.
 

@@ -17,6 +17,7 @@ Instructions:
 	--brute will find the best ordering for the celeba graph specified by the two files celeb_atts.csv and celeb_edges.csv, just as with the --dataset flag, but will use NetworkX instead of SAT
 
 File Modifications:
+
 	The attribute files, mushroom_atts.csv and celeb_atts.csv, should be in a single row format and contain only names from the headers for the respective data set. Names should be given in no particular order, separated by commas, on one line. This specifies the set of random variables in the graph.
 
 	The edges files, mushroom_edges.csv and celeb_edges.csv, should have an edge a -> b defined as a,b in each row. That is, each row specifies a directed edge from random variable a to random variable b. Only random variables specified in the attributes file associated with a given data set should be listed here. Also, there is no checking for cycles or duplicates, but these should be excluded or else the graph will not function properly. 

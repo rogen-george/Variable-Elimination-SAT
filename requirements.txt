@@ -21,7 +21,7 @@ pyrsistent==0.15.7
 python-dateutil==2.8.1
 python-sat==0.1.5.dev14
 pytz==2020.1
-scipy==1.4.1
+scipy==1.10.0
 seaborn==0.10.1
 six==1.15.0
 statsmodels==0.11.1
